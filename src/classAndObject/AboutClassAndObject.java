@@ -2,12 +2,17 @@ package classAndObject;
 
 public class AboutClassAndObject {
     public static void main(String[] args) {
-        // create an object and calling argument constructor
+        // create an object and calling parameterize  constructor
         Human obj = new Human(21, 48.7F, (float) 5.3F,"Tej");
-        // calling  no argument constructor
+
+        // creating another object calling  no argument constructor
         Human ob = new Human();
+
+        //function calling via an object
         obj.sleep();
         obj.eat();
+
+        // data member calling via an objects
         String name = obj.name;
         System.out.println(name);
         int age = obj.age;
@@ -16,7 +21,7 @@ public class AboutClassAndObject {
         System.out.println(height);
         float weight = obj.weight;
         System.out.println(weight);
-
+        System.out.println("count object "+Human.cnt);
     }
 }
 
@@ -26,6 +31,7 @@ class Human{
     float weight;
     float height;
     String name;
+    static int cnt=0;
     //Behaviour
     void sleep(){
         System.out.println("Tej is Sleeping");
@@ -33,7 +39,10 @@ class Human{
     void eat(){
         System.out.println("Tej is eating");
     }
+
+    // parameterize constructor
     Human(int age, float weight, float height, String name){
+        cnt++;
         this.age=age;
         this.weight=weight;
         this.height=height;
@@ -41,6 +50,7 @@ class Human{
     }
     // no argument contractor
     Human(){
+        cnt++;
         System.out.println("No argument constractor :) ");
     }
 }
