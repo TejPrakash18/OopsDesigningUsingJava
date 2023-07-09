@@ -2,19 +2,19 @@ package inhertance;
 
 public class aboutInheritance {
     public static void main(String[] args) {
-        Male obj =  new Male();
-        obj.eat();
-        obj.sleep();
+        BMW obj =  new BMW();
+        obj.start();
+        obj.run();
     }
 }
 
-class Human{
-    public void sleep(){
-        System.out.println("I'm eating");
+class Car{
+    public void start(){
+        System.out.println("I'm ready to start");
     }
 }
-class Male extends Human{
-    public void eat(){
-        System.out.println("I'm sleeping");
+class BMW extends Car{
+    public void run(){
+        System.out.println("I'm on running mode");
     }
 }
