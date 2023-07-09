@@ -22,6 +22,7 @@ public class AboutClassAndObject {
         float weight = obj.weight;
         System.out.println(weight);
         System.out.println("count object "+Human.cnt);
+        //System.out.println("static method "+Human.update());
     }
 }
 
@@ -52,5 +53,9 @@ class Human{
     Human(){
         cnt++;
         System.out.println("No argument constractor :) ");
+    }
+
+    static void update(){
+        cnt++;
     }
 }
