@@ -58,7 +58,4 @@ class Splendor extends Hero {
     public void intro(){
         System.out.println("This is splendor");
     }
-    public void model(){
-        System.out.println("new heros");
-    }
 }
