@@ -11,7 +11,7 @@ public class aboutPolymorphism {
         OverRiding obj1 = new OverRiding();
         obj1.run();
 
-        //object
+        //object creation
         OverRide obj2 = new OverRide();
         obj2.run();
 
@@ -30,6 +30,8 @@ class CompileTimePolymorphism{
     }
 }
 
+
+// runtime polymorphism
 class RunTimePolymorphism{
     public void run(){
         System.out.println("Running ");
