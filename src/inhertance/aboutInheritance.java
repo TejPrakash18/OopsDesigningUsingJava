@@ -2,10 +2,16 @@ package inhertance;
 
 public class aboutInheritance {
     public static void main(String[] args) {
+
+
         // single inheritance object
         BMW obj =  new BMW();
         obj.start();
         obj.run();
+        RangeRover objRange = new RangeRover();
+        objRange.start();
+        objRange.runner();
+
 
         // multilevel inheritance
 
@@ -34,6 +40,11 @@ class Car{
 class BMW extends Car{
     public void run(){
         System.out.println("I'm on running mode");
+    }
+}
+class RangeRover extends Car{
+    public void runner (){
+        System.out.println("I'm Range Rover");
     }
 }
 
