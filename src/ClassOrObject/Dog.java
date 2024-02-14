@@ -6,6 +6,10 @@ class Animal{
     public void bark(){
         System.out.println("Bark");
     }
+
+    public static void print(){
+//        head;
+    }
 }
 class Reference {
     int num ;
