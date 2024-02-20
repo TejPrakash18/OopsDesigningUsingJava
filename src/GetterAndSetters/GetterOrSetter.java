@@ -3,7 +3,8 @@ package GetterAndSetters;
 class Employee{
     private int eId;
     private String name = "Bhumi";
-     void setEmp(int eId, String name){
+//getter
+    void setEmp(int eId, String name){
          if (eId == 3){
              this.eId = eId;
          }
