@@ -26,44 +26,31 @@ abstract class Triangle extends Shapes{
     }
 }
 
- abstract class Circle extends Shapes{
+abstract class Circle extends Shapes{
     void calculateArea(int radius){
         area= 3.14*(radius*radius);
-        System.out.println(area);
+        System.out.println(area + " cm");
     }
 }
+//class GetAnswerCircle extends Circle{
+//    @Override
+//    void calculateArea(int radius) {
+//
+//    }
+//}
 
 public class Area{
     public static void main(String args[]){
-        Square obj1= new Square(){
+        System.out.println("hello");
+
+        Circle objC = new Circle() {
             @Override
             void calculateArea() {
 
             }
         };
-        Rectangle obj2=new Rectangle(){
-            @Override
-            void calculateArea() {
+        objC.calculateArea(4);
 
-            }
-        };
-        obj2.calculateArea(4,5);
 
-        Triangle obj3= new Triangle(){
-            @Override
-            void calculateArea() {
-
-            }
-        };
-        Circle obj4= new Circle(){
-            @Override
-            void calculateArea() {
-
-            }
-        };
-        obj1.calculateArea(3);
-        obj2.calculateArea(4,5);
-        obj3.calculateArea(7,8);
-        obj4.calculateArea(6);
     }
 }
