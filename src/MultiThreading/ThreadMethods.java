@@ -23,6 +23,30 @@ class MyThreadMethod implements Runnable{
     }
 
 }
+
+class ThreadInfo {
+
+    void info(){
+        Thread t3 = Thread.currentThread();
+        String tnamet=t3.getName();
+        System.out.println(tnamet);
+
+        t3.setName("MyThreadName :) ");
+        System.out.println(t3.getName());
+
+        try{
+            Thread.sleep(2000);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        };
+
+        System.out.println(t3.getId());
+
+    }
+
+
+}
 public class ThreadMethods {
     public static void main(String[] args) {
         Thread t = Thread.currentThread();
@@ -46,10 +70,16 @@ public class ThreadMethods {
 
         //
         System.out.println();
-        System.out.println("This is MyThreadMethod Information :) ");
-        MyThreadMethod t2 = new MyThreadMethod();
-        Thread th = new Thread(t2);
-        th.start();
+//        System.out.println("This is MyThreadMethod Information :) ");
+//        MyThreadMethod t2 = new MyThreadMethod();
+//        Thread th = new Thread(t2);
+//        th.start();
+
+
+        System.out.println();
+        System.out.println("Thread Info");
+        ThreadInfo ti = new ThreadInfo();
+        ti.info();
 
     }
 }
