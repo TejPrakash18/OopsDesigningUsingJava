@@ -11,7 +11,7 @@ class Producer extends Thread
     public void run()
     {
         int i=1;
-        while(true)
+        while(i<=10)
         {
             try {
                 this.c.produce_item(i);

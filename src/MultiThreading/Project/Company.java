@@ -6,7 +6,7 @@ class Company
     boolean f=false;
     // f=false: chance: producer
     //f=true: chance :consumer
-    synchronized public void produce_item(int n)throws Exception
+    synchronized public void produce_item(int n) throws Exception
     {
         if(f)
         {

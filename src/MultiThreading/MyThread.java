@@ -4,7 +4,7 @@ class TThread implements Runnable
 {
     public void run(){
         for (int i=1; i<=10;i++){
-            System.out.println("main "+i);
+            System.out.println("Thread One "+i);
         }
     }
 }
@@ -15,7 +15,7 @@ class NewThread implements Runnable{
         for(int i=1; i<=5;i++){
             System.out.println("Hello, I'm new Thread");
             try{
-                Thread.sleep(3000);
+                Thread.sleep(1000);
             }
             catch (Exception e){
                 System.out.println(e);

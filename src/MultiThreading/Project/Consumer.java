@@ -9,7 +9,8 @@ class Consumer extends Thread{
 
     public void run()
     {
-        while(true)
+        int i=1;
+        while(i<=10)
         {
             try {
                 this.c.consume_item();
