@@ -1,4 +1,4 @@
-package MultiThreading.Project;
+package Projects.ProducerOrConumer;
 
 class Company
 {
