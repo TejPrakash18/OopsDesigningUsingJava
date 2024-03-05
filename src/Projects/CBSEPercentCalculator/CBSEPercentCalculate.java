@@ -20,9 +20,14 @@ class Student{
     }
     public void setMarks(int[] marks) {
         this.marks = marks;
+
     }
 
     public int[] getMarks() {
+//        int sum =0;
+//        for (int i : marks){
+//            sum+=i;
+//        }
         return marks;
     }
 
