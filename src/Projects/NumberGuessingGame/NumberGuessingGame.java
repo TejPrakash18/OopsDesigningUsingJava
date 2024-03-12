@@ -10,16 +10,21 @@ class NumberGuessing {
     }
     public void play() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name ");
+        String name =  scanner.nextLine();
+
         while (!hasWon) {
+
             System.out.print("Guess a number between 1 and 100: ");
             int guess = scanner.nextInt();
+
 
             if (guess < randomNumber) {
                 System.out.println("Too low! Try again.");
             } else if (guess > randomNumber) {
                 System.out.println("Too high! Try again.");
             } else {
-                System.out.println("Congratulations! You guessed the number.");
+                System.out.println("Congratulations! "+ name +" guessed the number.");
                 hasWon = true;
             }
         }
