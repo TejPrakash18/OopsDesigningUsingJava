@@ -17,6 +17,12 @@ public class InterfaceProblemTwo {
     
         X obj = new Y();
         obj.methodX();
+//        X obj = new X() {
+//            @Override
+//            public void methodX() {
+//
+//            }
+//        }
     }
 
 }
