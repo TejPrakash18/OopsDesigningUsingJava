@@ -31,7 +31,6 @@ public class BMICalculator {
     // Main method to run the program
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter Player 1 details:");
         System.out.print("Weight in kg: ");
         double weight1 = scanner.nextDouble();
@@ -60,3 +59,55 @@ public class BMICalculator {
         scanner.close();
     }
 }
+
+//
+//
+//import java.util.Scanner;
+//class CalcualteBMI{
+//    private double weight;
+//    private double height;
+//    public double bmi;
+//    public String name;
+//    public String getName(){
+//        this.name=name;
+//        return name;
+//    }
+//    public void calculate(){
+//        Scanner scanner =new Scanner(System.in);
+//        System.out.println(" Enter ur name:");
+//        name= scanner.nextLine();
+//        System.out.println(getName()+" Enter your weight(in kg):");
+//        weight=scanner.nextDouble();
+//        System.out.println(getName()+" Enter your height(in inches):");
+//        height=scanner.nextDouble();
+//        bmi = 703*(weight/(height*height));
+//        System.out.println(getName()+" your BMI is:"+bmi);
+//
+//    }
+//
+//    public void bmiStatus(){
+//        this.bmi = bmi;
+//        this.name = name;
+//
+//        if (bmi < 18.5){
+//            System.out.println(getName()+" You are underweight");
+//        }
+//        else if (bmi >=18.5 && bmi< 24.9) {
+//            System.out.println(getName() +" You have a normal weight");
+//        }
+//        else if (bmi >=25 && bmi< 29.9) {
+//            System.out.println(getName() +" You are overweight");
+//        }
+//        else {
+//            System.out.println(getName()+" You are obesity");
+//        }
+//    }
+//
+//}
+//public class BMICalculator {
+//    public static void main(String args[]) {
+//        CalcualteBMI info = new CalcualteBMI();
+//        info.calculate();
+//        info.bmiStatus();
+//    }
+//}
