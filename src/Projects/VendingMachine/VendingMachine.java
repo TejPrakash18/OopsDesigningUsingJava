@@ -1,6 +1,7 @@
 package Projects.VendingMachine;
 
 import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 class Admin extends User{
     void check(int stock, int moneyCollected, String manufacturer){
@@ -84,6 +85,7 @@ class paymentGateway extends User{
                     if (money == recieve) {
                         System.out.println("Here, is your Drink. Take it & Enjoy. Thank you...");
 
+
                     } else if (money < recieve) {
                         returnMoney = recieve - money;
                         System.out.println("Here is your change" + returnMoney);
@@ -91,11 +93,13 @@ class paymentGateway extends User{
                     }
 
                 }
-                stock--;
+                stock-=count;
                 moneyCollected += money;
+
                 break;
             case "online":
                 Scanner input = new Scanner(System.in);
+                Random random = new Random();
                 System.out.println("Scan the QR code");
                 System.out.println("        "+"--------------");
                 System.out.println("        "+"|************|");
@@ -103,15 +107,16 @@ class paymentGateway extends User{
                 System.out.println("        "+"|************|");
                 System.out.println("        "+"|############|");
                 System.out.println("        "+"--------------");
-                System.out.println("E002136");
-                System.out.println("Please Enter Above code ");
+                int codeGenerate = random.nextInt(1000);
+                System.out.println("Please Enter this code " + codeGenerate );
                 String code = input.next();
-                if(Objects.equals(code, "E002136")){
+                if(Objects.equals(code, codeGenerate)){
                     System.out.println("Payment Successfully Done!");
                     System.out.println("Here, is your Drink. Take it & Enjoy. Thank you...");
                 }
-                stock--;
+                stock-=count;
                 moneyCollected += money;
+
                 break;
             default:
                 System.out.println("Enter valid Gateway");
