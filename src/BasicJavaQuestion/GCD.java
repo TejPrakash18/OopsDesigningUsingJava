@@ -3,7 +3,15 @@ package BasicJavaQuestion;
 import java.util.Scanner;
 
 public class GCD {
+    public static int gcd(int first,int sec){
+        if (first == 0){
+            return sec;
+        }
+        return gcd(sec%first, first);
+    }
     public static void main(String[] args) {
+        int ans = gcd(78, 66);
+        System.out.println(ans);
         Scanner input = new Scanner(System.in);
         System.out.println("Enter two the number!");
         int first = input.nextInt();
@@ -22,6 +30,7 @@ public class GCD {
             }
         }
         System.out.println(hcf);
+
 
     }
 }
